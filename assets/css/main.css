@@ -15,6 +15,7 @@ body {
   font-size: 1.6rem;
   line-height: 1;
   font-family: "Inter", "DM Sans", "Lato", sans-serif;
+  overflow-x: hidden;
 }
 
 img {
@@ -29,7 +30,12 @@ img {
   letter-spacing: 2px;
   font-weight: 800;
   padding: 1.4rem 2rem;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.5rem;
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
@@ -39,6 +45,48 @@ img {
 }
 .btn-contact:hover {
   background-color: #fff;
+  border-color: #fee100;
+}
+
+.wrap-btn-slider {
+  width: 180px;
+  height: 60px;
+  position: relative;
+}
+
+.btn-slider {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: #fee100;
+  border: 1px solid transparent;
+  outline: none;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+.btn-slider svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+.btn-slider:hover svg {
+  stroke-dashoffset: -480;
+}
+.btn-slider span {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+}
+.btn-slider:hover {
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  background: #fff;
   border-color: #fee100;
 }
 
@@ -75,6 +123,7 @@ img {
   padding: 1.8rem 2rem;
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
+  font-family: "Lexend", sans-serif;
 }
 .header .nav-item .nav-link:hover {
   background-color: #fee100;
@@ -98,4 +147,66 @@ img {
 .header-phone {
   color: #fee100;
   font-size: 3.8rem;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+
+#slider .carousel-indicators {
+  width: 100%;
+  margin-top: 6rem;
+}
+#slider .carousel-indicators button {
+  background-color: #fee100;
+  width: 6rem;
+  height: 6rem;
+  color: #000;
+  position: static;
+  text-indent: unset;
+  font-weight: 600;
+  color: #000;
+  font-size: 1.6rem;
+}
+#slider .carousel-inner {
+  height: 56rem;
+  width: 100vw;
+}
+#slider .carousel-item {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  gap: 3rem;
+  position: static;
+}
+#slider .carousel-item img {
+  width: 40%;
+  -webkit-clip-path: polygon(70% 0, 99% 30%, 100% 100%, 30% 100%, 0 70%, 0 0);
+  clip-path: polygon(70% 0, 99% 30%, 100% 100%, 30% 100%, 0 70%, 0 0);
+}
+#slider .carousel-item.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#slider .carousel-caption {
+  position: static;
+  color: #000;
+  width: 40%;
+}
+#slider .carousel-caption h5 {
+  font-size: 8rem;
+  text-align: left;
+  font-weight: 500;
+  line-height: 9rem;
+  margin-bottom: 3.9rem;
+  font-family: "Lexend", sans-serif;
+}
+#slider .carousel-caption p {
+  color: #7d758c;
+  text-align: left;
+  margin-bottom: 3.9rem;
 }

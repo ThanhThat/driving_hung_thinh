@@ -26,6 +26,7 @@ body {
   font-size: 1.6rem;
   line-height: 1;
   font-family: $font-family-base;
+  overflow-x: hidden;
 }
 
 // reset tag
@@ -42,7 +43,8 @@ img {
   letter-spacing: 2px;
   font-weight: 800;
   padding: 1.4rem 2rem;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
   transition: all 0.25s ease-in;
   text-transform: uppercase;
@@ -51,6 +53,49 @@ img {
   &:hover {
     background-color: #fff;
     border-color: #fee100;
+  }
+}
+
+.wrap-btn-slider {
+  width: 180px;
+  height: 60px;
+  position: relative;
+}
+
+.btn-slider {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: $primary-color;
+  border: 1px solid transparent;
+  outline: none;
+  transition: 1s ease-in-out;
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: $white;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+
+  &:hover svg {
+    stroke-dashoffset: -480;
+  }
+
+  span {
+    color: $black;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &:hover {
+    transition: 1s ease-in-out;
+    background: $white;
+    border-color: $primary-color;
   }
 }
 
@@ -85,6 +130,7 @@ img {
     display: inline-block;
     padding: 1.8rem 2rem;
     transition: all 0.25s linear;
+    font-family: $font-family-heading;
 
     &:hover {
       background-color: $primary-color;
@@ -108,5 +154,79 @@ img {
   &-phone {
     color: $primary-color;
     font-size: 3.8rem;
+    transition: all 0.25s ease-in;
+  }
+}
+
+#slider {
+  // width: 100vw;
+
+  .carousel-indicators {
+    width: 100%;
+    margin-top: 6rem;
+
+    button {
+      background-color: $primary-color;
+      width: 6rem;
+      height: 6rem;
+      color: $black;
+      position: static;
+      text-indent: unset;
+      font-weight: 600;
+      color: $black;
+      font-size: 1.6rem;
+    }
+  }
+
+  .carousel-inner {
+    height: 56rem;
+    width: 100vw;
+    // background-color: #5ca4ea;
+  }
+
+  .carousel-item {
+    display: none;
+    flex-direction: row-reverse;
+    gap: 3rem;
+    position: static;
+
+    img {
+      width: 40%;
+      -webkit-clip-path: polygon(
+        70% 0,
+        99% 30%,
+        100% 100%,
+        30% 100%,
+        0 70%,
+        0 0
+      );
+      clip-path: polygon(70% 0, 99% 30%, 100% 100%, 30% 100%, 0 70%, 0 0);
+    }
+  }
+
+  .carousel-item.active {
+    display: flex;
+    justify-content: center;
+  }
+
+  .carousel-caption {
+    position: static;
+    color: $black;
+    width: 40%;
+
+    h5 {
+      font-size: 8rem;
+      text-align: left;
+      font-weight: 500;
+      line-height: 9rem;
+      margin-bottom: 3.9rem;
+      font-family: $font-family-heading;
+    }
+
+    p {
+      color: $gray-light-2;
+      text-align: left;
+      margin-bottom: 3.9rem;
+    }
   }
 }
