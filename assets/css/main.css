@@ -176,7 +176,7 @@ img {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  gap: 3rem;
+  gap: 2.6rem;
   position: static;
 }
 #slider .carousel-item img {
@@ -209,4 +209,55 @@ img {
   color: #7d758c;
   text-align: left;
   margin-bottom: 3.9rem;
+}
+
+#main .highlight-section {
+  background-color: #000;
+  height: 9.6rem;
+}
+#main .carousel {
+  height: 100%;
+}
+#main .carousel-inner {
+  width: 100%;
+  height: inherit;
+}
+#main .carousel-item {
+  height: 100%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3.2rem;
+}
+#main .carousel-item.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#main .carousel-caption {
+  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+#main .carousel-caption img {
+  width: 2rem;
+  display: block;
+  margin-right: 8px;
+}
+#main .carousel-caption h5 {
+  color: #fff;
+  font-family: "Lexend", sans-serif;
+  font-size: 2rem;
+  font-style: italic;
+  line-height: 3rem;
+  margin-bottom: 0;
 }

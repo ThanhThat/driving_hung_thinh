@@ -187,7 +187,7 @@ img {
   .carousel-item {
     display: none;
     flex-direction: row-reverse;
-    gap: 3rem;
+    gap: 2.6rem;
     position: static;
 
     img {
@@ -227,6 +227,56 @@ img {
       color: $gray-light-2;
       text-align: left;
       margin-bottom: 3.9rem;
+    }
+  }
+}
+
+#main {
+  .highlight-section {
+    background-color: $black;
+    height: 9.6rem;
+  }
+
+  .carousel {
+    height: 100%;
+  }
+
+  .carousel-inner {
+    width: 100%;
+    height: inherit;
+  }
+
+  .carousel-item {
+    height: 100%;
+    display: none;
+    justify-content: center;
+    gap: 3.2rem;
+  }
+
+  .carousel-item.active {
+    display: flex;
+  }
+
+  .carousel-caption {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    img {
+      width: 2rem;
+      display: block;
+      margin-right: 8px;
+    }
+
+    h5 {
+      color: $white;
+      font-family: $font-family-heading;
+      font-size: 2rem;
+      font-style: italic;
+      line-height: 3rem;
+      margin-bottom: 0;
     }
   }
 }
