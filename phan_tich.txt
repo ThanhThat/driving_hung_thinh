@@ -1,0 +1,12 @@
+btn/header - bold: lexend
+text - normal: inter
+primary-color: #fee100
+text-header-color: #090909
+black: #000000
+white: #f9f9f9
+gray-light-1: #a6a7ab
+gray-light-2: #7d758c
+gray-dark: #adaeb2
+
+
+
